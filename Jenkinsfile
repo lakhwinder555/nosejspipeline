@@ -13,12 +13,14 @@ pipeline {
         }
         stage('Test') {
             steps {
-                // Add your test commands here
+                // Placeholder step
+                echo 'Running tests...'
             }
         }
-        stage('Deliver') {
-            steps {
-                // Add your delivery/deployment commands here
+        stage('Deliver') { 
+            steps { 
+                // Placeholder step
+                echo 'Delivering the build...'
             }
         }
     }
