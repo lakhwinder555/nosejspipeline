@@ -1,9 +1,10 @@
 pipeline {
-    agent any
-       docker {
+    agent {
+        docker {
             image 'node:lts-buster-slim'
             args '-p 3000:3000'
         }
+    }
     stages {
         stage('Build') {
             steps {
@@ -12,12 +13,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-               
+                // Add your test commands here
             }
         }
-        stage('Deliver') { 
-            steps { 
-              
+        stage('Deliver') {
+            steps {
+                // Add your delivery/deployment commands here
             }
         }
     }
